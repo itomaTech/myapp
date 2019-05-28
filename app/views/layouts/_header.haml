@@ -1,0 +1,32 @@
+.header
+  .header__content
+    .header__content__bars
+      = fa_icon("bars")
+    .header__content__icon
+      = link_to root_path, class: "fa" do
+        = fa_icon("kiwi-bird")
+    .header__content__avater
+      - if user_signed_in? && current_user.avatar.attached?
+        = image_tag current_user.avatar.variant(resize: "55x55")
+      - else 
+        = image_tag 'no-avatar.png', size: '47x47'
+    .header__content__tweet
+      = link_to new_tweet_path do
+        = fa_icon("comment-dots")
+
+%aside.sidebar
+  .sidebar__inner
+    %h2.sidebar__ttl Menu
+    %i.fas.fa-times-circle.sidebar__icon
+  %p.sidebar__txt
+    - if user_signed_in?
+      = link_to user_path(current_user.id), class: 'sidebar__txt' do
+        My page
+  %p.sidebar__txt
+    - if user_signed_in?
+      = link_to edit_user_registration_path, class: 'sidebar__txt' do
+        Edit user
+  %p.sidebar__txt
+    = link_to destroy_user_session_path, method: :DELETE, class: 'sidebar__txt' do
+      Log out
+.sidebar-bg

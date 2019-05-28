@@ -1,0 +1,82 @@
+.contents {
+  width: 100%; 
+  height: calc(100vh - 70px); 
+  margin: 0 300px;
+  overflow: scroll;
+  padding-top: 10px;
+  margin: auto;
+}
+
+.content {
+  height: 310px;
+  width: 450px;
+  background: snow;
+  margin: 20px auto;
+  box-shadow: 0 0 2px #51575b;
+
+  &__top {
+    padding: 15px 0 9px 12px;
+    display: flex;
+    position: relative;
+
+    &__avatar {
+      height: 75px;
+      width: 75px;
+      border-radius: 50%;
+      border: solid 1px gray;
+      position: relative;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .fa-sort-down {
+        font-size: 20px;
+      }
+    }
+
+    &__user-name {
+      line-height: 70px;
+      margin-left: 60px;
+      font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    i.fa-pencil-alt {
+      position: absolute;
+      top: 43px;
+      left: 350px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    
+    i.fa-trash-alt {
+      position: absolute;
+      top: 43px;
+      left: 390px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+
+  &__tweet {
+    height: 180px;
+    width: 390px;
+    margin: 7px auto;
+    background: white;
+    border: solid 1px #082b56;
+    box-shadow: 0 0 2px #082b56;
+    border-radius: 4px;
+    overflow: scroll;
+
+    &__body {
+      width: 350px;
+      margin: 10px auto;
+      word-wrap: break-word;
+      white-space: pre;
+    }
+  }
+}
