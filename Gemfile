@@ -76,3 +76,4 @@ gem 'mini_magick'
 gem 'devise'
 gem 'omniauth-twitter'
 gem 'jquery-rails'
+gem 'aws-sdk-s3', require: false
