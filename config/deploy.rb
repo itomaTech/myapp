@@ -8,7 +8,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1'
 # set :linked_files, %w{config/credentials.yml.enc}
-set :linked_files, 'config/database.yml', 'config/master.key'
+append  :linked_files, 'config/database.yml', 'config/master.key'
 
 set :ssh_options, auth_methods: ['publickey'],
                   keys: ['~/.ssh/myapp.pem']
