@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 簡易ツイートアプリ
 
-Things you may want to cover:
+* 機能
+ユーザー新規登録機能
+ユーザーログイン機能
+ユーザーログアウト機能
+ユーザー情報編集機能
+ユーザー投稿表示機能
 
-* Ruby version
+新規投稿機能
+投稿一覧表示機能
+投稿編集機能
+投稿削除機能
 
-* System dependencies
+* デプロイ環境
+AWS(EC2,S3)
+Unicorn
+Nginx
+MySQL
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 今後実装予定
+バリデーション(ユーザー登録時、新規投稿時)
+テスト(RSpec)
+無限スクロール機能実装
+「いいね」機能実装
