@@ -17,6 +17,6 @@
   .content__tweet
     .content__tweet__body
       #{tweet.body}
+    .content__tweet__images
       - (0...tweet.images.count).each do |image|
-        = #{\n}
         = image_tag tweet.thumbnail(image)

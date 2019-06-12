@@ -8,11 +8,13 @@
 }
 
 .content {
-  height: 310px;
   width: 450px;
   background: snow;
-  margin: 20px auto;
+  margin: 5px auto;
   box-shadow: 0 0 2px #51575b;
+  border: solid 1px #a3acba;
+  box-shadow: 0 0 2px #a3acba;
+  border-radius: 4px;
 
   &__top {
     padding: 15px 0 9px 12px;
@@ -63,20 +65,17 @@
   }
 
   &__tweet {
-    height: 180px;
-    width: 390px;
-    margin: 7px auto;
-    background: white;
-    border: solid 1px #082b56;
-    box-shadow: 0 0 2px #082b56;
-    border-radius: 4px;
-    overflow: scroll;
+    padding-bottom: 20px;
 
     &__body {
-      width: 350px;
-      margin: 10px auto;
-      word-wrap: break-word;
-      white-space: pre;
+      width: 390px;
+      margin: 0px auto 10px;
+      font-size: 18px;
+      white-space: pre-wrap;
+    }
+
+    &__images {
+      margin: 5px 30px 5px;
     }
   }
 }
