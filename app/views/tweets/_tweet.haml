@@ -1,11 +1,12 @@
 .content
   .content__top
     .content__top__avatar
-      - if tweet.user.avatar.attached?
-        = image_tag tweet.user.avatar.variant(resize: "90x90")
-      - else
-        = image_tag 'no-avatar.png', size: '80x80'
-
+      = link_to "/users/#{tweet.user_id}" do
+        - if tweet.user.avatar.attached?
+          = image_tag tweet.user.avatar.variant(resize: "90x90")
+        - else
+          = image_tag 'no-avatar.png', size: '80x80'
+ 
     .content__top__user-name
       #{tweet.user.name}
     - if user_signed_in? && current_user.id == tweet.user_id
