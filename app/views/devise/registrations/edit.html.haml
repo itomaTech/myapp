@@ -18,6 +18,8 @@
         = image_tag 'no-avatar.png', size: '80x80'
     = f.label :avatar, "", class: 'new-box__btn__image avatar-btn' do
       = f.file_field :avatar, style: "display:none;" 
+      .avatar-btn__avatar-text
+        avatar
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
     %div
       Currently waiting confirmation for: #{resource.unconfirmed_email}
