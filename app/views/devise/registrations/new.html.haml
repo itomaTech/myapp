@@ -24,7 +24,9 @@
     .content__top__avatar.preview
       = image_tag 'no-avatar.png', size: '80x80'
     = f.label :avatar, "", class: 'new-box__btn__image avatar-btn' do
-      = f.file_field :avatar, style: "display:none;" 
+      = f.file_field :avatar, style: "display:none;"
+      .avatar-btn__avatar-text
+        avatar
   .actions
     = f.submit "OK", class: 'button'
 = render "devise/shared/links"

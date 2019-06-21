@@ -1,4 +1,7 @@
 = form_with model: @tweet, local: true, method: :post do |f|
+  - @tweet.errors.full_messages.each do |message|
+    .error-msg
+      = message
   .contents
     .new-content
       .content__top
